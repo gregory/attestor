@@ -128,7 +128,7 @@ module Attestor
       # @param [Proc] block
       #
       # @return [undefined]
-      def validations(**options, &block)
+      def validations(*options, &block)
         Context.new(self, options).instance_eval(&block) if block_given?
       end
 
